@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Barlow Condensed', sans-serif;
+    height: 99vh;
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    text-align: center;
+    background: linear-gradient(90deg, #ffcb05, #ff9f00, #ffcb05);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow:
+        2px 2px 0 #2a75bb,
+        4px 4px 0 #1c4e8c;
+    font-family: 'Segoe UI', 'Poppins', sans-serif;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.Search {
+    width: 210px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to bottom, rgb(227, 213, 255), rgb(255, 231, 231));
+    border-radius: 30px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    caret-color: rgb(255, 81, 0);
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    color: rgb(19, 19, 19);
+    font-size: 13.4px;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to bottom, #1b1c3f, #4a4e91);
+    color: white;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    border: none;
+    border-radius: 30px;
+    padding: 14px 28px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    animation: button-bright 2s infinite;
+    transition: all 0.3s ease-in-out;
+}
+
+.button:hover {
+    background: linear-gradient(to bottom, #2c2f63, #5b67b7);
+    animation: button-click 1s ease-in-out infinite;
+    transform: translateY(-2px);
+}
+
+.button:active {
+    transform: scale(0.95);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+#pokeImg {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    display: none;
+    margin-left: auto;
+    margin-right: auto;
+    filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+}
+
+#pokeImg.loaded {
+    opacity: 1;
+}
+
+#pokeImg:hover {
+    transform: scale(1.1);
+}
+
+#logo {
+    height: 10ch;
+    width: 30ch;
+}
+
+@keyframes button-bright{
+    0% {
+        background-position: left top;
+    }
+    100% {
+        background-position: right bottom;
+    }
+}
+
+@keyframes button-click {
+    0% {
+        background-position: left top;
+    }
+    100% {
+        background-position: right bottom;
+    }
+}
