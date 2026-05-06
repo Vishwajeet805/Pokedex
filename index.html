@@ -1,77 +1,13 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Pokédex // Tactical Scanner</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>2</title>
   </head>
   <body>
-    <div id="startup" class="startup-screen">
-      <div class="startup-grid"></div>
-      <div class="scanner-rings"><span></span><span></span><span></span></div>
-      <div class="pokedex-core">
-        <div class="core-top"></div>
-        <div class="core-mid"></div>
-        <div class="core-bottom"></div>
-      </div>
-      <p class="boot-text">Initializing Pokédex…</p>
-    </div>
-
-    <main id="app" class="app hidden">
-      <div class="ambient-layer"></div>
-      <div class="scanlines"></div>
-      <div class="noise"></div>
-
-      <header class="hud-header glass-panel">
-        <h1>Pokédex Tactical Scanner</h1>
-        <p>Classified Creature Analysis Interface</p>
-      </header>
-
-      <section class="scanner-hero glass-panel">
-        <div class="hero-radar"></div>
-        <h2>Search Pokémon by name or ID</h2>
-        <div class="scanner-input-wrap">
-          <input id="PokemonName" type="text" placeholder="Search Pokémon by name or ID" />
-          <button id="searchBtn">SCAN</button>
-        </div>
-      </section>
-
-      <nav class="radial-nav">
-        <button class="nav-orb" data-target="explore">Explore</button>
-        <button class="nav-orb" data-target="compare">Compare</button>
-        <button class="nav-orb" data-target="team">Team Builder</button>
-        <button class="nav-orb" data-target="favorites">Favorites</button>
-      </nav>
-
-      <section class="screen-grid">
-        <article class="glass-panel pokemon-detail" id="detailPanel">
-          <h3>Creature Analysis</h3>
-          <div class="pokemon-core">
-            <div class="type-aura" id="typeAura"></div>
-            <img id="pokeImg" alt="pokemon render" />
-          </div>
-          <div id="pokemonMeta" class="meta"></div>
-          <div id="statBars" class="stats"></div>
-        </article>
-
-        <article class="glass-panel explorer-panel" id="explore">
-          <h3>Explorer Archive</h3>
-          <div id="explorerCards" class="card-stream"></div>
-        </article>
-
-        <article class="glass-panel compare-panel" id="compare">
-          <h3>Compare Matrix (up to 3)</h3>
-          <div id="compareSlots" class="compare-slots"></div>
-        </article>
-
-        <article class="glass-panel team-panel" id="team">
-          <h3>Team Builder (6 Capsules)</h3>
-          <div id="teamSlots" class="team-slots"></div>
-        </article>
-      </section>
-    </main>
-
-    <script src="index.js"></script>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
